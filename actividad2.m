@@ -30,8 +30,10 @@ den2 = [0 0 6 16]; % 6s + 16
 
 [s_num4, s_den4] = parallel(s_num4, s_den4, s_num3, s_den3);
 
-final_y = step(s_num4, s_den4);
+step(s_num4, s_den4);
 
-final_x = linspace(1, 70, length(final_y));
+%final_y = step(s_num4, s_den4);
 
-loglog(final_x, final_y)
+%final_x = linspace(1, 70, length(final_y));
+
+%loglog(final_x, final_y)
