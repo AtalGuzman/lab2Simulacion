@@ -3,7 +3,7 @@
 num3 = [0 0 4 10]; % 4s+10
 den3 = [4 9 5 0];  % 4s³+9s²+5s
 
-[s_num1, s_den1] = cloop(num3, den3);
+[s_num1, s_den1] = cloop(num3, den3,+1);
 
 num4 = [0 0 0 1];  % 1
 den4 = [0 0 7 10]; %7s + 10
@@ -30,4 +30,8 @@ den2 = [0 0 6 16]; % 6s + 16
 
 [s_num4, s_den4] = parallel(s_num4, s_den4, s_num3, s_den3);
 
-step(s_num4, s_den4, 100);
+final_y = step(s_num4, s_den4);
+
+final_x = linspace(1, 70, length(final_y));
+
+loglog(final_x, final_y)
